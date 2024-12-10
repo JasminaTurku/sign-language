@@ -2,6 +2,7 @@ import pickle
 import cv2
 import mediapipe as mp
 import numpy as np
+from text_to_speech import text_to_speech_threaded
 
 # Load the trained model
 model_dict = pickle.load(open('./model.p', 'rb'))
@@ -77,6 +78,7 @@ while True:
         # Make predictions
         prediction = model.predict([np.asarray(data_aux)])
         predicted_character = labels_dict[int(prediction[0])]
+        text_to_speech_threaded(predicted_character)
 
         # Get bounding box coordinates for display
         x1 = int(min(x_) * W) - 10

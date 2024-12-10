@@ -1,16 +1,17 @@
 # sign-language
 
+## create virtual environment
+
+```
+python -m venv .venv
+```
+
 ## Select interpreter
 
 ```
 ctrl+shift+p -> python select interpreter
 ```
 
-## create virtual environment
-
-```
-python -m venv .venv
-```
 
 ## Dependenices
 

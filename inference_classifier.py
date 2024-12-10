@@ -26,6 +26,9 @@ mp_drawing = mp.solutions.drawing_utils
 mp_drawing_styles = mp.solutions.drawing_styles
 hands = mp_hands.Hands(static_image_mode=True, min_detection_confidence=0.3)
 
+prev_predicted_character = None
+
+
 while True:
 
 
@@ -78,7 +81,10 @@ while True:
         # Make predictions
         prediction = model.predict([np.asarray(data_aux)])
         predicted_character = labels_dict[int(prediction[0])]
-        text_to_speech_threaded(predicted_character)
+        
+        if prev_predicted_character!=predicted_character:
+            text_to_speech_threaded(predicted_character)
+            prev_predicted_character=predicted_character
 
         # Get bounding box coordinates for display
         x1 = int(min(x_) * W) - 10

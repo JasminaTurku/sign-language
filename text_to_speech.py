@@ -53,7 +53,7 @@ def _debounce_and_speak(text, lang='sr'):
                 if _last_text == text:
                     text_to_speech(text, lang)
 
-        _debounce_timer = threading.Timer(0.2, speak_after_delay)
+        _debounce_timer = threading.Timer(0.2, speak_after_delay) # probaj i sa 100ms debounce, pa vidi sta bolje radi
         _debounce_timer.start()
 
 def text_to_speech_threaded(text, lang='sr'):

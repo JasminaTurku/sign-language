@@ -82,9 +82,9 @@ while True:
         prediction = model.predict([np.asarray(data_aux)])
         predicted_character = labels_dict[int(prediction[0])]
         
-        if prev_predicted_character!=predicted_character:
-            text_to_speech_threaded(predicted_character)
-            prev_predicted_character=predicted_character
+        # if prev_predicted_character!=predicted_character:
+        #     text_to_speech_threaded(predicted_character)
+        #     prev_predicted_character=predicted_character
 
         # Get bounding box coordinates for display
         x1 = int(min(x_) * W) - 10

@@ -3,19 +3,20 @@ import numpy as np
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
+import os
 
 # Load data from the pickle file
 data_dict = pickle.load(open('./data.pickle', 'rb'))
 
-# Ensure consistent label mapping
-label_mapping = {
-    "A": 0, "B": 1, "C": 2, "D": 3, "E": 4, "F": 5, "G": 6, "H": 7, "I": 8,
-    "J": 9, "K": 10, "L": 11, "M": 12, "N": 13, "O": 14, "P": 15, "Q": 16,
-    "R": 17, "S": 18, "T": 19, "U": 20, "V": 21, "W": 22, "X": 23, "Y": 24, "Z": 25
-}
+# Define the data directory
+DATA_DIR = './data'
 
-# Map string labels to integers
-reverse_label_mapping = {v: k for k, v in label_mapping.items()}  # For reverse mapping later
+# Get sorted list of directory names
+labels = sorted(os.listdir(DATA_DIR))  # Ensure the labels are sorted
+
+# Create label mapping and reverse mapping
+label_mapping = {label: idx for idx, label in enumerate(labels)}
+reverse_label_mapping = {idx: label for label, idx in label_mapping.items()}
 
 filtered_data = []
 filtered_labels = []
@@ -24,17 +25,8 @@ for data, label in zip(data_dict['data'], data_dict['labels']):
         filtered_data.append(data)
         filtered_labels.append(label_mapping[label])
 
-# Fix inconsistency in data length by padding with zeros
-max_length = max(len(item) for item in filtered_data)
-data_fixed = []
-for item in filtered_data:
-    if len(item) < max_length:
-        item = item + [0] * (max_length - len(item))  # Popravite dužinu podataka
-    data_fixed.append(item)
-
-
 # Convert data and labels into numpy arrays
-data = np.asarray(data_fixed)
+data = np.asarray(filtered_data)
 labels = np.asarray(filtered_labels)
 
 # Split the dataset into training and testing sets

@@ -5,20 +5,19 @@ import mediapipe as mp
 import cv2
 import matplotlib.pyplot as plt
 
+from utils.create_features import create_features
+from utils.extract_hand_landmark_coordinates import extract_hand_landmark_coordinates
 
 mp_hands = mp.solutions.hands
-mp_drawing = mp.solutions.drawing_utils
-mp_drawing_styles = mp.solutions.drawing_styles
-
 hands = mp_hands.Hands(static_image_mode=True, min_detection_confidence=0.3)
 
 DATA_DIR = './data'
-
 data = []
 labels = []
+
 for dir_ in os.listdir(DATA_DIR):
     for img_path in os.listdir(os.path.join(DATA_DIR, dir_)):
-        data_aux = []
+        features = []
 
         x_ = []
         y_ = []
@@ -29,20 +28,13 @@ for dir_ in os.listdir(DATA_DIR):
         results = hands.process(img_rgb)
         if results.multi_hand_landmarks:
             for hand_landmarks in results.multi_hand_landmarks:
-                for i in range(len(hand_landmarks.landmark)):
-                    x = hand_landmarks.landmark[i].x
-                    y = hand_landmarks.landmark[i].y
+                # Extract x and y coordinates
+                x_, y_ = extract_hand_landmark_coordinates(hand_landmarks)
 
-                    x_.append(x)
-                    y_.append(y)
+                # Use create_features to normalize and prepare the feature array
+                features = create_features(hand_landmarks, x_, y_)
 
-                for i in range(len(hand_landmarks.landmark)):
-                    x = hand_landmarks.landmark[i].x
-                    y = hand_landmarks.landmark[i].y
-                    data_aux.append(x - min(x_))
-                    data_aux.append(y - min(y_))
-
-            data.append(data_aux)
+            data.append(features)
             labels.append(dir_)
 
 f = open('data.pickle', 'wb')

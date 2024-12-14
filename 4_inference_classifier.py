@@ -3,7 +3,6 @@ import cv2
 import mediapipe as mp
 import numpy as np
 from utils.draw_hand_landmarks import draw_hand_landmarks
-from utils.speech_to_text import speech_to_text_threaded
 from utils.text_to_speech import text_to_speech_threaded
 import os
 from utils.draw_predicted_character import draw_predicted_character
@@ -31,10 +30,6 @@ cap = cv2.VideoCapture(0)
 mp_hands = mp.solutions.hands
 hands = mp_hands.Hands(static_image_mode=True, min_detection_confidence=0.3)
 
-# -----------------------------------------------------
-# UNCOMMENT THE FOLLOWING LINE TO TEST SPEECH TO TEXT
-# speech_to_text_threaded()
-# -----------------------------------------------------
 
 while True:
     # Read a frame from the webcam

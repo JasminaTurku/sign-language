@@ -101,8 +101,60 @@ model.p<br>
 Prvi zadatak aplikacije je da se kao ulazni podatak prikaže znak uz pomoć kamere a da je izlazni podatak slovo koje se prikazuje na ekranu.
 ![Alt text](The-first-goal.PNG)
 
-Prvo je potrebno prikupiti slike koje predstavljaju ulazne podatke. To se obavlja pomoću fajla 1_collect_imgs.py. U okviru ovog fajla koristi se kamera za prikupljanje slika, pri čemu korisnik označava trenutak snimanja pritiskom na taster ENTER. Svaka snimljena slika se čuva u direktorijumu data, u posebnoj fascikli koja odgovara prikazanom simbolu. Ove slike se koriste za kreiranje skupa podataka za treniranje modela. Za svako snimljeno slovo kreira se po 100 slika. Na primer, u direktorijumu data nalaziće se fascikla A koja sadrži 100 slika slova A.
+Prvo je potrebno prikupiti slike koje predstavljaju ulazne podatke. To se obavlja pomoću fajla 1_collect_imgs.py. U okviru ovog fajla koristi se kamera za prikupljanje slika, pri čemu korisnik označava trenutak snimanja pritiskom na taster ENTER. Svaka snimljena slika se čuva u direktorijumu data, u posebnoj fascikli koja odgovara prikazanom simbolu. Ove slike se koriste za kreiranje skupa podataka za treniranje modela. Za svako snimljeno slovo kreira se po 100 slika. Na primer, u direktorijumu data nalaziće se folder A koja sadrži 100 slika slova A iz različitih uglova. Takodje, korisnik ima mogucnost da prekine snimanje slika, klikom na taster ESC.
 
+Program učitava slike ruku iz različitih foldera, pri čemu svaki folder predstavlja jednu klasu (na primer, različite gestove ruke). Zatim koristi MediaPipe (modul mp_hands) za detekciju ruke na svakoj slici. Nakon uspešne detekcije, iz slike se izdvajaju koordinate landmarkova, odnosno zglobova prstiju ruke. Na osnovu tih koordinata kreira se vektor karakteristika (feature vektor), koji predstavlja numeričku reprezentaciju položaja prstiju. Na kraju, svi dobijeni podaci, zajedno sa odgovarajućim klasama (labelama), čuvaju se u .pickle fajl, kako bi mogli da se koriste u narednim fazama, poput treniranja modela mašinskog učenja
+
+###### Inicijalizacija MediaPipe Hand modula
+mp_hands = mp.solutions.hands
+hands = mp_hands.Hands(static_image_mode=True, min_detection_confidence=0.5)
+###### Učitavanje slika iz foldera
+for dir_ in os.listdir(DATA_DIR):
+    for img_path in os.listdir(os.path.join(DATA_DIR, dir_)):
+        features, x_, y_ = [], [], []
+
+        # Čitanje i konverzija slike u RGB
+        img = cv2.imread(os.path.join(DATA_DIR, dir_, img_path))
+        img_rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+
+        # Detekcija ruke
+        results = hands.process(img_rgb)
+        if results.multi_hand_landmarks:
+            for hand_landmarks in results.multi_hand_landmarks:
+                x_, y_ = extract_hand_landmark_coordinates(hand_landmarks)
+                features = create_features(hand_landmarks, x_, y_)
+                data.append(features)
+                labels.append(dir_)
+
+###### Čuvanje podataka u pickle fajl
+f = open('data.pickle', 'wb')
+pickle.dump({'data': data, 'labels': labels}, f)
+f.close()
+###### Ekstrakcija X i Y koordinata landmarka ruke
+def extract_hand_landmark_coordinates(hand_landmarks):
+    x_ = []
+    y_ = []
+    for i in range(len(hand_landmarks.landmark)):
+        x = hand_landmarks.landmark[i].x
+        y = hand_landmarks.landmark[i].y
+        x_.append(x)
+        y_.append(y)
+    return x_, y_
+
+###### Kreiranje feature vektora relativno u odnosu na minimalnu vrednost
+def create_features(hand_landmarks, x_, y_):
+    features = []
+    for i in range(len(hand_landmarks.landmark)):
+        x = hand_landmarks.landmark[i].x
+        y = hand_landmarks.landmark[i].y
+        features.append(x - min(x_))
+        features.append(y - min(y_))
+
+    max_length = 84
+    if len(features) < max_length:
+        features.extend([0] * (max_length - len(features)))
+
+    return features
 ## create virtual environment
 
 ```

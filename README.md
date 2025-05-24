@@ -187,10 +187,10 @@ print(f'{score * 100:.2f}% of samples were classified correctly!')```</pre>
     pickle.dump({'model': model, 'label_mapping': reverse_label_mapping}, f)```</pre>
 
 U fajlu 4_inference_classifier.py se koristi MediaPipe za detekciju šake sa kamere u realnom vremenu, ekstraktuje ključne tačke šake, zatim koristi trenirani model za klasifikaciju znaka (slova) i prikazuje ga na ekranu. Istovremeno, prepoznato slovo se automatski izgovara pomoću sinteze govora, čime se omogućava prevod znakovnog jezika u govor.
-# Inicijalizacija MediaPipe za detekciju šaka
+##### Inicijalizacija MediaPipe za detekciju šaka
 <pre>```mp_hands = mp.solutions.hands
 hands = mp_hands.Hands(static_image_mode=True, min_detection_confidence=0.3)```</pre>
-# Glavna petlja koja radi dok ne pritisnemo 'q'
+##### Glavna petlja koja radi dok ne pritisnemo 'q'
     <pre>``` while True:
     # Čitanje slike sa kamere
     ret, frame = cap.read()
@@ -203,7 +203,7 @@ hands = mp_hands.Hands(static_image_mode=True, min_detection_confidence=0.3)```<
     frame_rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
     ```</pre>
     
-### Obrada slike pomoću MediaPipe za detekciju ruke
+##### Obrada slike pomoću MediaPipe za detekciju ruke
     <pre>``` results = hands.process(frame_rgb)
     if results.multi_hand_landmarks:
         for hand_landmarks in results.multi_hand_landmarks:

@@ -151,6 +151,40 @@ f.close()```</pre>
     if len(features) < max_length:
         features.extend([0] * (max_length - len(features)))
     return features```</pre>
+
+### Treniranje modela
+###### Definisanje putanje do direktorijuma sa podacima
+<pre>```DATA_DIR = './data'```</pre>
+###### Učitavanje podataka iz pickle fajla
+<pre>```labels = sorted(os.listdir(DATA_DIR))
+data_dict = pickle.load(open('./data.pickle', 'rb'))```</pre>
+###### Mapiranje labela u numeričke vrednosti i obrnuto
+<pre>```label_mapping = {label: idx for idx, label in enumerate(labels)}
+reverse_label_mapping = {idx: label for label, idx in label_mapping.items()}
+###### Filtriranje podataka
+<pre>```filtered_data = []
+filtered_labels = []
+for data, label in zip(data_dict['data'], data_dict['labels']):
+    if label in label_mapping:
+        filtered_data.append(data)
+        filtered_labels.append(label_mapping[label])```</pre>
+###### Pretvaranje u NumPy nizove
+<pre>```data = np.asarray(filtered_data)
+labels = np.asarray(filtered_labels)
+###### Podela na trening i test skup
+<pre>```x_train, x_test, y_train, y_test = train_test_split(
+    data, labels, test_size=0.2, shuffle=True, stratify=labels)```</pre>
+##### Treniranje modela
+<pre>```model = RandomForestClassifier(random_state=84)
+model.fit(x_train, y_train)```</pre>
+##### Model koristi ono što je naučio da predvidi klase za test podatke (x_test) 
+<pre>```y_predict = model.predict(x_test)
+score = accuracy_score(y_predict, y_test)
+print(f'{score * 100:.2f}% of samples were classified correctly!')```</pre>
+##### Čuvanje modela
+<pre>```with open('model.p', 'wb') as f:
+    pickle.dump({'model': model, 'label_mapping': reverse_label_mapping}, f)```</pre>
+
 ## create virtual environment
 
 ```

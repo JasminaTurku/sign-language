@@ -79,6 +79,7 @@ Ako treba brzo rešenje za obradu slike ili video streama, ako se radi na projek
 
 ## Realizacija projekta i struktura
 Prvi zadatak aplikacije je da se kao ulazni podatak prikaže znak uz pomoć kamere a da je izlazni podatak slovo koje se prikazuje na ekranu.
+![Alt text](The-first-goal.PNG)
 
 
 

@@ -76,7 +76,7 @@ Iako postoji podrška za Android i iOS, integracija u mobilne aplikacije može b
 Ako treba brzo rešenje za obradu slike ili video streama, ako se radi na projektima sa interakcijom preko pokreta, ruku, lica ili tela.
 
 ## MediaPipe vs Open CV vs TensorFlow/PyTorch
-![Alt text] (MediaPipe-vs-OpenCV-vs-TensorFlow.PNG)
+![Alt text](MediaPipe-vs-OpenCV-vs-TensorFlow.PNG)
 
 
 

@@ -221,6 +221,10 @@ hands = mp_hands.Hands(static_image_mode=True, min_detection_confidence=0.3)```<
             # Izgovaranje znaka glasom
             text_to_speech_threaded(predicted_character) ```</pre>
 
+#### Izlaz koji dobijemo
+![Alt text](Output1.PNG)
+![Alt text](Output2.PNG)
+
 
 
 ## create virtual environment

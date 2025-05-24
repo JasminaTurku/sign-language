@@ -44,6 +44,50 @@ Selfie Segmentation – odvajanje korisnika od pozadine
 Hair Segmentation – segmentacija kose
 Gesture Recognition – prepoznavanje pokreta i gestikulacija
 
+## Prednosti MediaPipe
+#### MediaPipe nudi gotove i dobro optimizovane modele pa samim tim nema potrebe za treniranjem sopstvenih modela:
+-Detekciju ruku
+-Praćenje lica (Face Mesh)
+-Detekciju tela (Pose)
+-Detekciju objekata
+-OCR (prepoznavanje teksta)
+#### Visoke performanse u realnom vremenu
+-Optimizovan za rad u realnom vremenu, čak i na mobilnim uređajima.
+-Podržava GPU akceleraciju
+#### Višeplatformska podrška
+-Radi na Windows, Linux, macOS, Android i iOS.
+-Može se koristiti sa Python-om, C++, JavaScript-om, pa čak i u Unity okruženju
+#### Modularna arhitektura
+-Koristi tzv. "pipeline" pristup: svaki deo obrade (npr. prepoznavanje, filtriranje, vizualizacija) je modularan i može se prilagoditi.
+-Lako možeš da kombinuješ module ili praviš sopstvene
+#### Besplatan i open-source
+-Razvijen od strane Google-a i objavljen pod Apache 2.0 licencom.
+-Možeš slobodno koristiti u komercijalnim i nekomercijalnim projektima.
+#### Laka integracija
+-Pruža jednostavne API-je.
+-Možeš ga lako integrisati u postojeće projekte.
+#### Vizualizacija i debugging
+-Dolazi sa alatima za lako prikazivanje i praćenje rezultata u stvarnom vremenu.
+-Debugging pipeline-a je jednostavan zahvaljujući vizuelnim prikazima
+
+## Mane MediaPipe 
+#### Ograničena prilagodljivost modela
+-MediaPipe koristi unapred trenirane modele.
+-Ne možeš lako trenirati sopstveni model unutar MediaPipe okruženja.
+-Nije pogodno za projekte koji zahtevaju specifičnu detekciju objekata ili klasifikaciju prilagođenu tvojoj aplikaciji.
+#### Ograničena preciznost i robusnost
+-Radi odlično u kontrolisanim uslovima, ali:
+  Gubi preciznost pri lošem osvetljenju
+  Ima problema sa delimično zaklonjenim objektima (npr. ruke iza tela)
+  Teže se nosi sa brzim pokretima ili neobičnim pozama
+#### Ograničena fleksibilnost na mobilnim uređajima
+Iako postoji podrška za Android i iOS, integracija u mobilne aplikacije može biti teža i zahtevnija u poređenju sa drugim bibliotekama poput TensorFlow Lite.
+#### Nedostatak detaljne dokumentacije za napredne primene
+
+## Kada je potrebno koristiti MediaPipe
+Ako treba brzo rešenje za obradu slike ili video streama, ako se radi na projektima sa interakcijom preko pokreta, ruku, lica ili tela.
+
+
 
 
 

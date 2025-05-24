@@ -14,7 +14,7 @@ Glavni problem sa kojim se suočavaju osobe oštećenog sluha je način na koji 
 Ova aplikacija ima za cilj da pomogne u prevazilaženju tog problema. Korišćenjem kamere, korisnici mogu pokazati znak, a aplikacija će prepoznati i prikazati odgovarajuće slovo. Takođe, postoji opcija u kojoj korisnik može izgovoriti slovo putem mikrofona, a aplikacija će to slovo pretvoriti u odgovarajući znak.
 
 ### Media pipe biblioteka
-<img src="https://example.com/image.jpg" alt="Alt text" width="500"/>
+![Alt text](MediaPipe.PNG)
 
 ## create virtual environment
 

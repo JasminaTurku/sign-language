@@ -45,6 +45,8 @@ Hair Segmentation – segmentacija kose
 Gesture Recognition – prepoznavanje pokreta i gestikulacija
 
 
+
+
 ## create virtual environment
 
 ```

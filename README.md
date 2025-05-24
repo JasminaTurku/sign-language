@@ -34,41 +34,30 @@ MediaPipe je dizajniran da radi na više platformi. Podržava operativne sisteme
 
 Predefinisani modeli i rešenja
 MediaPipe dolazi sa velikim brojem unapred definisanih rešenja koja omogućavaju brzo postavljanje sistema bez potrebe za dodatnim treniranjem modela. Neka od najpoznatijih rešenja uključuju:
-Face Detection – detekcija lica u realnom vremenu
-Face Mesh – mapiranje preko 400 tačaka na licu
-Hand Tracking – precizno praćenje pokreta ruku i prstiju - koji je korišćen u samoj aplikaciji
-Pose Estimation – analiza položaja tela
-Objectron – 3D detekcija objekata
-Holistic – kombinovano praćenje tela, ruku i lica
-Selfie Segmentation – odvajanje korisnika od pozadine
-Hair Segmentation – segmentacija kose
-Gesture Recognition – prepoznavanje pokreta i gestikulacija
+Face Detection – detekcija lica u realnom vremenu <br>
+Face Mesh – mapiranje preko 400 tačaka na licu <br>
+Hand Tracking – precizno praćenje pokreta ruku i prstiju - koji je korišćen u samoj aplikaciji <br>
+Pose Estimation – analiza položaja tela <br>
+Objectron – 3D detekcija objekata <br>
+Holistic – kombinovano praćenje tela, ruku i lica <br>
+Selfie Segmentation – odvajanje korisnika od pozadine <br>
+Hair Segmentation – segmentacija kose <br>
+Gesture Recognition – prepoznavanje pokreta i gestikulacija <br>
 
 ## Prednosti MediaPipe
 #### MediaPipe nudi gotove i dobro optimizovane modele pa samim tim nema potrebe za treniranjem sopstvenih modela:
--Detekciju ruku
--Praćenje lica (Face Mesh)
--Detekciju tela (Pose)
--Detekciju objekata
--OCR (prepoznavanje teksta)
+Detekciju ruku, praćenje lica, detekciju tela, detekciju objekata, OCR (prepoznavanje teksta)
 #### Visoke performanse u realnom vremenu
--Optimizovan za rad u realnom vremenu, čak i na mobilnim uređajima.
--Podržava GPU akceleraciju
+Optimizovan za rad u realnom vremenu, čak i na mobilnim uređajima
 #### Višeplatformska podrška
--Radi na Windows, Linux, macOS, Android i iOS.
--Može se koristiti sa Python-om, C++, JavaScript-om, pa čak i u Unity okruženju
+Radi na Windows, Linux, macOS, Android i iOS. Može se koristiti sa Python-om, C++, JavaScript-om, pa čak i u Unity okruženju
 #### Modularna arhitektura
--Koristi tzv. "pipeline" pristup: svaki deo obrade (npr. prepoznavanje, filtriranje, vizualizacija) je modularan i može se prilagoditi.
--Lako možeš da kombinuješ module ili praviš sopstvene
+Koristi "pipeline" pristup: svaki deo obrade (npr. prepoznavanje, filtriranje, vizualizacija) je modularan i može se prilagoditi.
+Lako moze da se kombinuju moduli ili da se napravi sopstveni
 #### Besplatan i open-source
--Razvijen od strane Google-a i objavljen pod Apache 2.0 licencom.
--Možeš slobodno koristiti u komercijalnim i nekomercijalnim projektima.
+Razvijen od strane Google-a i objavljen pod Apache 2.0 licencom. Može se koristiti u komercijalnim i nekomercijalnim projektima.
 #### Laka integracija
--Pruža jednostavne API-je.
--Možeš ga lako integrisati u postojeće projekte.
-#### Vizualizacija i debugging
--Dolazi sa alatima za lako prikazivanje i praćenje rezultata u stvarnom vremenu.
--Debugging pipeline-a je jednostavan zahvaljujući vizuelnim prikazima
+Pruža jednostavne API-je. Može se lako integrisati u postojeće projekte.
 
 ## Mane MediaPipe 
 #### Ograničena prilagodljivost modela

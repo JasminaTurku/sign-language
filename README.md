@@ -153,6 +153,7 @@ f.close()```</pre>
     return features```</pre>
 
 ### Treniranje modela
+Ovaj učitava prethodno sačuvane podatke i labele, priprema ih za treniranje, zatim trenira Random Forest model za klasifikaciju pokreta (npr. gestova), testira njegovu tačnost i čuva model zajedno sa mapom oznaka u fajl kako bi se kasnije mogao koristiti za prepoznavanje u realnom vremenu
 ###### Definisanje putanje do direktorijuma sa podacima
 <pre>```DATA_DIR = './data'```</pre>
 ###### Učitavanje podataka iz pickle fajla

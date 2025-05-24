@@ -106,8 +106,8 @@ Prvo je potrebno prikupiti slike koje predstavljaju ulazne podatke. To se obavlj
 Program učitava slike ruku iz različitih foldera, pri čemu svaki folder predstavlja jednu klasu (na primer, različite gestove ruke). Zatim koristi MediaPipe (modul mp_hands) za detekciju ruke na svakoj slici. Nakon uspešne detekcije, iz slike se izdvajaju koordinate landmarkova, odnosno zglobova prstiju ruke. Na osnovu tih koordinata kreira se vektor karakteristika (feature vektor), koji predstavlja numeričku reprezentaciju položaja prstiju. Na kraju, svi dobijeni podaci, zajedno sa odgovarajućim klasama (labelama), čuvaju se u .pickle fajl, kako bi mogli da se koriste u narednim fazama, poput treniranja modela mašinskog učenja
 
 ###### Inicijalizacija MediaPipe Hand modula
-<pre>```mp_hands = mp.solutions.hands<br>
-hands = mp_hands.Hands(static_image_mode=True, min_detection_confidence=0.5)<br>```</pre>
+<pre>```mp_hands = mp.solutions.hands
+hands = mp_hands.Hands(static_image_mode=True, min_detection_confidence=0.5)```</pre>
 ###### Učitavanje slika iz foldera
 for dir_ in os.listdir(DATA_DIR):<br>
     for img_path in os.listdir(os.path.join(DATA_DIR, dir_)):<br>

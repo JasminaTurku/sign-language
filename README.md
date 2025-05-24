@@ -81,8 +81,8 @@ Ako treba brzo rešenje za obradu slike ili video streama, ako se radi na projek
 #### Struktura projekta
 data/<br>
 utils/<br>
-│
-├── __pycache__/
+│<br>
+├── __pycache__/<br>
 ├── create_features.py<br>
 ├── draw_hand_landmarks.py<br>
 ├── draw_predicted_character.py<br>

@@ -9,11 +9,11 @@ Aplikacija omogućava osobama oštećenog sluha lakšu komunikaciju sa osobama k
 - [Koje kompanije i projekti su pokušali da reše problem](#koje-kompanije-i-projekti-su-pokušali-da-reše-problem)
 - [Instalacija](#instalacija)
 
-### Problem koji aplikacija rešava?
+## Problem koji aplikacija rešava?
 Glavni problem sa kojim se suočavaju osobe oštećenog sluha je način na koji komuniciraju sa ljudima koji ne poznaju znakovni jezik. U Srbiji je ovaj problem posebno izražen, jer prema podacima Saveza gluvih i nagluvih Srbije, oko 70.000 osoba koristi srpski znakovni jezik kao svoj prvi jezik. Nažalost, u Srbiji postoji oko 30 tumača znakovnog jezika za 70.000 ljudi. Nedostatak tumača ozbiljno otežava svakodnevni život osoba koje koriste znakovni jezik. Takođe, usluga tumača je uglavnom dostupna samo u kritičnim situacijama, dok su svakodnevne potrebe ove zajednice često zapostavljene.
 Ova aplikacija ima za cilj da pomogne u prevazilaženju tog problema. Korišćenjem kamere, korisnici mogu pokazati znak, a aplikacija će prepoznati i prikazati odgovarajuće slovo. Takođe, postoji opcija u kojoj korisnik može izgovoriti slovo putem mikrofona, a aplikacija će to slovo pretvoriti u odgovarajući znak.
 
-### Media pipe biblioteka
+## Media pipe biblioteka
 ![Alt text](MediaPipe.PNG)
 
 #### Nastanak Media pip-a
@@ -47,7 +47,7 @@ Selfie Segmentation – odvajanje korisnika od pozadine<br>
 Hair Segmentation – segmentacija kose<br>
 Gesture Recognition – prepoznavanje pokreta i gestikulacija<br>
 
-## Prednosti MediaPipe
+### Prednosti MediaPipe
 #### MediaPipe nudi gotove i dobro optimizovane modele pa samim tim nema potrebe za treniranjem sopstvenih modela:
 Detekciju ruku, praćenje lica, detekciju tela, detekciju objekata, OCR (prepoznavanje teksta)
 #### Visoke performanse u realnom vremenu
@@ -62,7 +62,7 @@ Razvijen od strane Google-a i objavljen pod Apache 2.0 licencom. Može se korist
 #### Laka integracija
 Pruža jednostavne API-je. Može se lako integrisati u postojeće projekte.
 
-## Mane MediaPipe 
+### Mane MediaPipe 
 #### Ograničena prilagodljivost modela
 MediaPipe koristi unapred trenirane modele. Ne može se lako trenirati sopstveni modeli unutar MediaPipe okruženja. Nije pogodno za projekte koji zahtevaju specifičnu detekciju objekata ili klasifikaciju prilagođenu tvojoj aplikaciji.
 #### Ograničena preciznost i robusnost
@@ -74,9 +74,11 @@ Iako postoji podrška za Android i iOS, integracija u mobilne aplikacije može b
 ## Kada je potrebno koristiti MediaPipe
 Ako treba brzo rešenje za obradu slike ili video streama, ako se radi na projektima sa interakcijom preko pokreta, ruku, lica ili tela.
 
-## MediaPipe vs Open CV vs TensorFlow
+### MediaPipe vs Open CV vs TensorFlow
 ![Alt text](Comparison-of-MediaPipe-and-other-frameworks.PNG)
 
+## Realizacija projekta i struktura
+Prvi zadatak aplikacije je da se kao ulazni podatak prikaže znak uz pomoć kamere a da je izlazni podatak slovo koje se prikazuje na ekranu.
 
 
 

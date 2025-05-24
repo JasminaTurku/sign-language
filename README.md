@@ -61,14 +61,9 @@ Pruža jednostavne API-je. Može se lako integrisati u postojeće projekte.
 
 ## Mane MediaPipe 
 #### Ograničena prilagodljivost modela
--MediaPipe koristi unapred trenirane modele.
--Ne možeš lako trenirati sopstveni model unutar MediaPipe okruženja.
--Nije pogodno za projekte koji zahtevaju specifičnu detekciju objekata ili klasifikaciju prilagođenu tvojoj aplikaciji.
+MediaPipe koristi unapred trenirane modele. Ne može se lako trenirati sopstveni modeli unutar MediaPipe okruženja. Nije pogodno za projekte koji zahtevaju specifičnu detekciju objekata ili klasifikaciju prilagođenu tvojoj aplikaciji.
 #### Ograničena preciznost i robusnost
--Radi odlično u kontrolisanim uslovima, ali:
-  Gubi preciznost pri lošem osvetljenju
-  Ima problema sa delimično zaklonjenim objektima (npr. ruke iza tela)
-  Teže se nosi sa brzim pokretima ili neobičnim pozama
+Radi odlično u kontrolisanim uslovima, ali: gubi preciznost pri lošem osvetljenju, ima problema sa delimično zaklonjenim objektima (npr. ruke iza tela), teže se nosi sa brzim pokretima ili neobičnim pozama
 #### Ograničena fleksibilnost na mobilnim uređajima
 Iako postoji podrška za Android i iOS, integracija u mobilne aplikacije može biti teža i zahtevnija u poređenju sa drugim bibliotekama poput TensorFlow Lite.
 #### Nedostatak detaljne dokumentacije za napredne primene

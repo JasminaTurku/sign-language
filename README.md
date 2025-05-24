@@ -82,7 +82,7 @@ Ako treba brzo rešenje za obradu slike ili video streama, ako se radi na projek
 data/<br>
 utils/<br>
 │
-├── __pycache__/<br>
+├── __pycache__/
 ├── create_features.py<br>
 ├── draw_hand_landmarks.py<br>
 ├── draw_predicted_character.py<br>

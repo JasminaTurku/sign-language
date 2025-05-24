@@ -109,48 +109,48 @@ Program učitava slike ruku iz različitih foldera, pri čemu svaki folder preds
 <pre>```mp_hands = mp.solutions.hands
 hands = mp_hands.Hands(static_image_mode=True, min_detection_confidence=0.5)```</pre>
 ###### Učitavanje slika iz foldera
-for dir_ in os.listdir(DATA_DIR):<br>
-    for img_path in os.listdir(os.path.join(DATA_DIR, dir_)):<br>
+<pre>```for dir_ in os.listdir(DATA_DIR):
+    for img_path in os.listdir(os.path.join(DATA_DIR, dir_)):
         features, x_, y_ = [], [], []<br>
-        # Čitanje i konverzija slike u RGB<br>
-        img = cv2.imread(os.path.join(DATA_DIR, dir_, img_path))<br>
-        img_rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)<br>
-        #Detekcija ruke<br>
-        results = hands.process(img_rgb)<br>
-        if results.multi_hand_landmarks:<br>
-            for hand_landmarks in results.multi_hand_landmarks:<br>
-                x_, y_ = extract_hand_landmark_coordinates(hand_landmarks)<br>
-                features = create_features(hand_landmarks, x_, y_)<br>
-                data.append(features)<br>
-                labels.append(dir_)<br>
+        # Čitanje i konverzija slike u RGB
+        img = cv2.imread(os.path.join(DATA_DIR, dir_, img_path))
+        img_rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+        #Detekcija ruke
+        results = hands.process(img_rgb)
+        if results.multi_hand_landmarks:
+            for hand_landmarks in results.multi_hand_landmarks:
+                x_, y_ = extract_hand_landmark_coordinates(hand_landmarks)
+                features = create_features(hand_landmarks, x_, y_)
+                data.append(features)
+                labels.append(dir_)```</pre>
 
 ###### Čuvanje podataka u pickle fajl
-f = open('data.pickle', 'wb')<br>
+<pre>```f = open('data.pickle', 'wb')<br>
 pickle.dump({'data': data, 'labels': labels}, f)<br>
-f.close()<br>
+f.close()```</pre>
 ###### Ekstrakcija X i Y koordinata landmarka ruke
-def extract_hand_landmark_coordinates(hand_landmarks):<br>
-    x_ = []<br>
-    y_ = []<br>
-    for i in range(len(hand_landmarks.landmark)):<br>
-        x = hand_landmarks.landmark[i].x<br>
-        y = hand_landmarks.landmark[i].y<br>
-        x_.append(x)<br>
-        y_.append(y)<br>
-    return x_, y_<br>
+<pre>```def extract_hand_landmark_coordinates(hand_landmarks):
+    x_ = []
+    y_ = []
+    for i in range(len(hand_landmarks.landmark)):
+        x = hand_landmarks.landmark[i].x
+        y = hand_landmarks.landmark[i].y
+        x_.append(x)
+        y_.append(y)
+    return x_, y_```</pre>
 
 ###### Kreiranje feature vektora relativno u odnosu na minimalnu vrednost
-def create_features(hand_landmarks, x_, y_):<br>
-    features = []<br>
-    for i in range(len(hand_landmarks.landmark)):<br>
-        x = hand_landmarks.landmark[i].x<br>
-        y = hand_landmarks.landmark[i].y<br>
-        features.append(x - min(x_))<br>
-        features.append(y - min(y_))<br>
-    max_length = 84<br>
-    if len(features) < max_length:<br>
-        features.extend([0] * (max_length - len(features)))<br>
-    return features<br>
+<pre>```def create_features(hand_landmarks, x_, y_):
+    features = []
+    for i in range(len(hand_landmarks.landmark)):
+        x = hand_landmarks.landmark[i].x
+        y = hand_landmarks.landmark[i].y
+        features.append(x - min(x_))
+        features.append(y - min(y_))
+    max_length = 84
+    if len(features) < max_length:
+        features.extend([0] * (max_length - len(features)))
+    return features```</pre>
 ## create virtual environment
 
 ```

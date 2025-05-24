@@ -79,30 +79,29 @@ Ako treba brzo rešenje za obradu slike ili video streama, ako se radi na projek
 
 ## Realizacija projekta i struktura
 #### Struktura projekta
-data/
-utils/
+data/<br>
+utils/<br>
 │
-├── __pycache__/
-├── create_features.py
-├── draw_hand_landmarks.py
-├── draw_predicted_character.py
-├── extract_hand_landmark_coordinates.py
-├── text_to_speech.py
-.gitignore
-1_collect_imgs.py
-2_create_dataset.py
-3_train_classifier.py
-4_inference_classifier.py
-5_speech_to_text.py
-data.pickle
-model.p
+├── __pycache__/<br>
+├── create_features.py<br>
+├── draw_hand_landmarks.py<br>
+├── draw_predicted_character.py<br>
+├── extract_hand_landmark_coordinates.py<br>
+├── text_to_speech.py<br>
+.gitignore<br>
+1_collect_imgs.py<br>
+2_create_dataset.py<br>
+3_train_classifier.py<br>
+4_inference_classifier.py<br>
+5_speech_to_text.py<br>
+data.pickle<br>
+model.p<br>
 
 #### Realizacija projekta
 Prvi zadatak aplikacije je da se kao ulazni podatak prikaže znak uz pomoć kamere a da je izlazni podatak slovo koje se prikazuje na ekranu.
 ![Alt text](The-first-goal.PNG)
 
-Prvo trebamo da prikupimo slike kao ulazni podaci, to radimo uz pomoc fajla '1_collect_imgs.py'
-U okviru ovog fajla koristi se kamera za prikupljanje slika koje korisnik označava pritiskom na taster ctrl+F. Svaka slika se čuva u direktorijumu 'data' koji odgovara prikazanom simbolu, a koristi se za kreiranje skupa podataka za treniranje modela.
+Prvo je potrebno prikupiti slike koje predstavljaju ulazne podatke. To se obavlja pomoću fajla 1_collect_imgs.py. U okviru ovog fajla koristi se kamera za prikupljanje slika, pri čemu korisnik označava trenutak snimanja pritiskom na taster ENTER. Svaka snimljena slika se čuva u direktorijumu data, u posebnoj fascikli koja odgovara prikazanom simbolu. Ove slike se koriste za kreiranje skupa podataka za treniranje modela. Za svako snimljeno slovo kreira se po 100 slika. Na primer, u direktorijumu data nalaziće se fascikla A koja sadrži 100 slika slova A.
 
 ## create virtual environment
 

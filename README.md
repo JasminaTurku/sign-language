@@ -160,8 +160,8 @@ f.close()```</pre>
 data_dict = pickle.load(open('./data.pickle', 'rb'))```</pre>
 ###### Mapiranje labela u numeričke vrednosti i obrnuto
 <pre>```label_mapping = {label: idx for idx, label in enumerate(labels)}
-reverse_label_mapping = {idx: label for label, idx in label_mapping.items()}
-###### Filtriranje podataka
+reverse_label_mapping = {idx: label for label, idx in label_mapping.items()}```</pre>
+##### Filtriranje podataka
 <pre>```filtered_data = []
 filtered_labels = []
 for data, label in zip(data_dict['data'], data_dict['labels']):
@@ -170,7 +170,7 @@ for data, label in zip(data_dict['data'], data_dict['labels']):
         filtered_labels.append(label_mapping[label])```</pre>
 ###### Pretvaranje u NumPy nizove
 <pre>```data = np.asarray(filtered_data)
-labels = np.asarray(filtered_labels)
+labels = np.asarray(filtered_labels)```</pre>
 ###### Podela na trening i test skup
 <pre>```x_train, x_test, y_train, y_test = train_test_split(
     data, labels, test_size=0.2, shuffle=True, stratify=labels)```</pre>

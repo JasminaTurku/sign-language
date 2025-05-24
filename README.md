@@ -78,11 +78,31 @@ Ako treba brzo rešenje za obradu slike ili video streama, ako se radi na projek
 ![Alt text](Comparison-of-MediaPipe-and-other-frameworks.PNG)
 
 ## Realizacija projekta i struktura
+#### Struktura projekta
+data/
+utils/
+│
+├── __pycache__/
+├── create_features.py
+├── draw_hand_landmarks.py
+├── draw_predicted_character.py
+├── extract_hand_landmark_coordinates.py
+├── text_to_speech.py
+.gitignore
+1_collect_imgs.py
+2_create_dataset.py
+3_train_classifier.py
+4_inference_classifier.py
+5_speech_to_text.py
+data.pickle
+model.p
+
+#### Realizacija projekta
 Prvi zadatak aplikacije je da se kao ulazni podatak prikaže znak uz pomoć kamere a da je izlazni podatak slovo koje se prikazuje na ekranu.
 ![Alt text](The-first-goal.PNG)
 
-
-
+Prvo trebamo da prikupimo slike kao ulazni podaci, to radimo uz pomoc fajla '1_collect_imgs.py'
+U okviru ovog fajla koristi se kamera za prikupljanje slika koje korisnik označava pritiskom na taster ctrl+F. Svaka slika se čuva u direktorijumu 'data' koji odgovara prikazanom simbolu, a koristi se za kreiranje skupa podataka za treniranje modela.
 
 ## create virtual environment
 

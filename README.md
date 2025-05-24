@@ -1,4 +1,5 @@
 # sign-language
+Aplikacija koja olakšava ljudima oštećenog sluha da lakse komuniciraju sa ljudima koji nemaju taj problem.
 
 ## create virtual environment
 

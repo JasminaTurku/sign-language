@@ -226,6 +226,7 @@ hands = mp_hands.Hands(static_image_mode=True, min_detection_confidence=0.3)```<
 ![Alt text](Output2.PNG)
 
 ## Drugi zadatak je pretvaranje slova u znakove
+![Alt text](Pretvaranje-slova-u-znakove.PNG)
 
 
 

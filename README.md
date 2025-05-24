@@ -186,6 +186,43 @@ print(f'{score * 100:.2f}% of samples were classified correctly!')```</pre>
 <pre>```with open('model.p', 'wb') as f:
     pickle.dump({'model': model, 'label_mapping': reverse_label_mapping}, f)```</pre>
 
+U fajlu 4_inference_classifier.py se koristi MediaPipe za detekciju šake sa kamere u realnom vremenu, ekstraktuje ključne tačke šake, zatim koristi trenirani model za klasifikaciju znaka (slova) i prikazuje ga na ekranu. Istovremeno, prepoznato slovo se automatski izgovara pomoću sinteze govora, čime se omogućava prevod znakovnog jezika u govor.
+# Inicijalizacija MediaPipe za detekciju šaka
+<pre>```mp_hands = mp.solutions.hands
+hands = mp_hands.Hands(static_image_mode=True, min_detection_confidence=0.3)```</pre>
+# Glavna petlja koja radi dok ne pritisnemo 'q'
+    <pre>``` while True:
+    # Čitanje slike sa kamere
+    ret, frame = cap.read()
+    if not ret:
+        print("Neuspešno čitanje slike. Izlazim...")
+        break
+    # Dimenzije slike
+    H, W, _ = frame.shape
+    # Pretvaranje slike u RGB format (MediaPipe zahteva RGB)
+    frame_rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+    ```</pre>
+    
+### Obrada slike pomoću MediaPipe za detekciju ruke
+    <pre>``` results = hands.process(frame_rgb)
+    if results.multi_hand_landmarks:
+        for hand_landmarks in results.multi_hand_landmarks:
+            # Crtanje tačaka ruke na slici
+            draw_hand_landmarks(frame, hand_landmarks)
+            # Ekstrakcija x i y koordinata iz tačaka ruke
+            x_, y_ = extract_hand_landmark_coordinates(hand_landmarks)
+            # Normalizacija i kreiranje niza karakteristika
+            features = create_features(hand_landmarks, x_, y_)
+            # Korišćenje modela za predikciju znaka
+            prediction = model.predict([np.asarray(features)])
+            predicted_character = reverse_label_mapping[int(prediction[0])]
+            # Prikaz prepoznatog znaka na slici
+            draw_predicted_character(frame, x_, y_, W, H, predicted_character)
+            # Izgovaranje znaka glasom
+            text_to_speech_threaded(predicted_character) ```</pre>
+
+
+
 ## create virtual environment
 
 ```

@@ -4,9 +4,8 @@ Aplikacija omogućava osobama oštećenog sluha lakšu komunikaciju sa osobama k
 ## Sadržaj
 
 - [Problem koji aplikacija rešava?](#problem-koji-aplikacija-rešava)
-- [Struktura projekta](#struktura-projekta)
 - [Media pipe biblioteka](#media-pipe-biblioteka)
-- [Realizacija projekta](#realizacija-projekta)
+- [Realizacija projekta i struktura](#realizacija-projekta-i-struktura)
 - [Koje kompanije i projekti su pokušali da reše problem](#koje-kompanije-i-projekti-su-pokušali-da-reše-problem)
 - [Instalacija](#instalacija)
 

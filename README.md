@@ -238,10 +238,10 @@ def draw_hand_landmarks(frame, hand_landmarks):
 ![Alt text](Output2.PNG)
 
 ## Koje kompanije i projekti su pokušali da reše problem?
-SignAvatar - startap koji koristi veštačku inteligenciju za prevod informacija na srpski znakovni jezik. Razvili su ga mladi matematičari s ciljem da reše svakodnevne probleme gluvih osoba u Srbiji. Softver se koristi na železničkoj stanici Prokop u Beogradu.
-Google AI Project – Sign Language Detection - Google razvija sistem koji pomoću kamere i veštačke inteligencije prepoznaje pokrete znakovnog jezika.Pokrete ruku prepoznaje i prevodi u tekst ili govor u realnom vremenu.
-SignAll - Projekat koji koristi AI, kompjuterski vid i senzore za automatsko prepoznavanje američkog znakovnog jezika (ASL). Sistemi prepoznaju ruku u realnom vremenu i prevode ASL u tekst bez potrebe za ljudskim prevodiocem.
-Doktorski projekat Mladena Radakovića - razvijen model zasnovan na veštačkoj inteligenciji za prepoznavanje dvoručne azbuke srpskog znakovnog jezika.Sistem koristi kamere mobilnih uređaja ili računara i veštačku inteligenciju za prepoznavanje pokreta ruku i njihovo prevođenje u tekst.
+SignAvatar - startap koji koristi veštačku inteligenciju za prevod informacija na srpski znakovni jezik. Razvili su ga mladi matematičari s ciljem da reše svakodnevne probleme gluvih osoba u Srbiji. Softver se koristi na železničkoj stanici Prokop u Beogradu.<br>
+Google AI Project – Sign Language Detection - Google razvija sistem koji pomoću kamere i veštačke inteligencije prepoznaje pokrete znakovnog jezika.Pokrete ruku prepoznaje i prevodi u tekst ili govor u realnom vremenu.<br>
+SignAll - Projekat koji koristi AI, kompjuterski vid i senzore za automatsko prepoznavanje američkog znakovnog jezika (ASL). Sistemi prepoznaju ruku u realnom vremenu i prevode ASL u tekst bez potrebe za ljudskim prevodiocem.<br>
+Doktorski projekat Mladena Radakovića - razvijen model zasnovan na veštačkoj inteligenciji za prepoznavanje dvoručne azbuke srpskog znakovnog jezika.Sistem koristi kamere mobilnih uređaja ili računara i veštačku inteligenciju za prepoznavanje pokreta ruku i njihovo prevođenje u tekst.<br>
 
 
 

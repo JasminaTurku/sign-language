@@ -1,5 +1,5 @@
 ## Sign-language
-Aplikacija omogućava osobama oštećenog sluha lakšu komunikaciju sa osobama koje nemaju taj problem. Razvijena je u Pythonu, koristeći biblioteku MediaPipe, koja omogućava praćenje pokreta prstiju u realnom vremenu, koristeći algoritme za prepoznavanje ključnih tačaka na ruci.
+Aplikacija omogućava gluvonemim osobama da lakše komunikaciju sa osobama koje nemaju taj problem. Razvijena je u Pythonu, koristeći biblioteku MediaPipe, koja omogućava praćenje pokreta prstiju u realnom vremenu, koristeći algoritme za prepoznavanje ključnih tačaka na ruci.
 
 ## Sadržaj
 

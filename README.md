@@ -57,25 +57,18 @@ Paket modela za detekciju ključnih tačaka šake prepoznaje lokacije 21 ključn
 Model za detekciju dlana locira ruke unutar ulazne slike, dok model za detekciju ključnih tačaka prepoznaje specifične tačke na šaci u delu slike koji je definisan od strane modela za detekciju dlana. Pošto je pokretanje modela za detekciju dlana vremenski zahtevno, u režimu rada sa video zapisom, Hand Landmarker koristi bounding box koji je model za ključne tačke šake detektovao u jednom frejmu, kako bi lokalizovao oblast ruke u narednim frejmovima. Hand Landmarker ponovo pokreće model za detekciju dlana samo ako model za ključne tačke više ne prepoznaje prisustvo šake ili ne uspeva da prati šaku u okviru. Ovo smanjuje broj pokretanja modela za detekciju dlana.
 
 ### Prednosti MediaPipe
-* MediaPipe nudi gotove i dobro optimizovane modele pa samim tim nema potrebe za treniranjem sopstvenih modela:
-Detekciju ruku, praćenje lica, detekciju tela, detekciju objekata, OCR (prepoznavanje teksta)
-* Visoke performanse u realnom vremenu: Optimizovan za rad u realnom vremenu, čak i na mobilnim uređajima
-* Višeplatformska podrška: Radi na Windows, Linux, macOS, Android i iOS. Može se koristiti sa Python-om, C++, JavaScript-om, pa čak i u Unity okruženju
-* Modularna arhitektura: Koristi "pipeline" pristup: svaki deo obrade (npr. prepoznavanje, filtriranje, vizualizacija) je modularan i može se prilagoditi.
-* Besplatan i open-source:Razvijen od strane Google-a i objavljen pod Apache 2.0 licencom. Može se koristiti u komercijalnim i nekomercijalnim projektima.
-* Laka integracija:Pruža jednostavne API-je. Može se lako integrisati u postojeće projekte.
+* MediaPipe nudi gotove i dobro optimizovane modele pa samim tim nema potrebe za treniranjem sopstvenih modela: detekciju ruku, praćenje lica, detekciju tela, detekciju objekata, OCR (prepoznavanje teksta)
+* Visoke performanse u realnom vremenu: optimizovan za rad u realnom vremenu, čak i na mobilnim uređajima
+* Višeplatformska podrška: radi na Windows, Linux, macOS, Android i iOS. Može se koristiti sa Python-om, C++, JavaScript-om, pa čak i u Unity okruženju
+* Modularna arhitektura: koristi "pipeline" pristup: svaki deo obrade (npr. prepoznavanje, filtriranje, vizualizacija) je modularan i može se prilagoditi.
+* Besplatan i open-source: razvijen od strane Google-a i objavljen pod Apache 2.0 licencom.
+* Laka integracija: pruža jednostavne API-je. Može se lako integrisati u postojeće projekte.
 
 ### Mane MediaPipe 
-#### Ograničena prilagodljivost modela
-MediaPipe koristi unapred trenirane modele. Ne može se lako trenirati sopstveni modeli unutar MediaPipe okruženja. Nije pogodno za projekte koji zahtevaju specifičnu detekciju objekata ili klasifikaciju prilagođenu tvojoj aplikaciji.
-#### Ograničena preciznost i robusnost
-Radi odlično u kontrolisanim uslovima, ali: gubi preciznost pri lošem osvetljenju, ima problema sa delimično zaklonjenim objektima (npr. ruke iza tela), teže se nosi sa brzim pokretima ili neobičnim pozama
-#### Ograničena fleksibilnost na mobilnim uređajima
-Iako postoji podrška za Android i iOS, integracija u mobilne aplikacije može biti teža i zahtevnija u poređenju sa drugim bibliotekama poput TensorFlow Lite.
-#### Nedostatak detaljne dokumentacije za napredne primene
-
-## Kada je potrebno koristiti MediaPipe
-Ako treba brzo rešenje za obradu slike ili video streama, ako se radi na projektima sa interakcijom preko pokreta, ruku, lica ili tela.
+* Ograničena prilagodljivost modela: MediaPipe koristi unapred trenirane modele. Ne može se lako trenirati sopstveni modeli unutar MediaPipe okruženja.
+* Ograničena preciznost i robusnost: radi odlično u kontrolisanim uslovima, ali gubi preciznost pri lošem osvetljenju, ima problema sa delimično zaklonjenim objektima (npr. ruke iza tela), teže se nosi sa brzim pokretima ili neobičnim pozama
+* Ograničena fleksibilnost na mobilnim uređajima: iako postoji podrška za Android i iOS, integracija u mobilne aplikacije može biti teža i zahtevnija u poređenju sa drugim bibliotekama poput TensorFlow Lite.
+* Nedostatak detaljne dokumentacije za napredne primene
 
 ### MediaPipe vs Open CV vs TensorFlow
 ![Alt text](Comparison-of-MediaPipe-and-other-frameworks.PNG)

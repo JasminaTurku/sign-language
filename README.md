@@ -48,7 +48,7 @@ Hair Segmentation – segmentacija kose<br>
 Gesture Recognition – prepoznavanje pokreta i gestikulacija<br>
 
 #### Hand Tracking model
-MediaPipe Hand Landmarker omogućava detekciju ključnih tačaka (landmarkova) šake na slici. Ovaj zadatak možete koristiti za lociranje ključnih tačaka ruku i prikazivanje vizuelnih efekata na njima. Zadatak funkcioniše nad slikama koristeći model mašinskog učenja (ML) i može raditi sa statičkim podacima ili neprekidnim video tokom. Kao izlaz, daje: koordinate ključnih tačaka šake u slici, koordinate ključnih tačaka u 3D prostoru, i informaciju o tome da li je u pitanju leva ili desna ruka, za više detektovanih ruku.
+MediaPipe Hand Landmarker omogućava detekciju ključnih tačaka (landmarkova) šake na slici. MediaPipe Hand Landmarker se može koristiti za lociranje ključnih tačaka ruku i prikazivanje vizuelnih efekata. Funkcioniše nad slikama koristeći model mašinskog učenja (ML) i može raditi sa statičkim podacima ili neprekidnim video tokom. Kao izlaz, daje: koordinate ključnih tačaka šake u slici, koordinate ključnih tačaka u 3D prostoru, i informaciju o tome da li je u pitanju leva ili desna ruka, za više detektovanih ruku.
 Hand Landmarker koristi paket modela koji sadrži dva ugrađena modela: model za detekciju dlana i model za detekciju ključnih tačaka šake i potreban nam je paket modela koji sadrži oba ova modela.
 
 Paket modela za detekciju ključnih tačaka šake prepoznaje lokacije 21 ključne tačke (zgloba prstiju) unutar detektovanih oblasti šake.

@@ -98,12 +98,12 @@ data.pickle<br>
 model.p<br>
 
 #### Realizacija projekta
-Zadatak aplikacije je da se kao ulazni podatak dobije znak uz pomoć kamere a daje izlazni podatak slovo koje se prikazuje na ekranu i izgovara to slovo ili cele rečenice.
+Zadatak aplikacije je da kao ulaz primi znak preko kamere, a kao izlaz prikaže odgovarajuće slovo na ekranu i izgovori to slovo ili celu rečenicu.
 ![Alt text](The-first-goal.PNG)
 
-Prvo je potrebno prikupiti slike koje predstavljaju ulazne podatke. To se obavlja pomoću fajla 1_collect_imgs.py. U okviru ovog fajla koristi se kamera za prikupljanje slika, pri čemu korisnik označava trenutak snimanja pritiskom na taster ENTER. Svaka snimljena slika se čuva u direktorijumu data, u posebnoj fascikli koja odgovara prikazanom simbolu. Ove slike se koriste za kreiranje skupa podataka za treniranje modela. Za svako snimljeno slovo kreira se po 100 slika. Na primer, u direktorijumu data nalaziće se folder A koja sadrži 100 slika slova A iz različitih uglova. Takodje, korisnik ima mogucnost da prekine snimanje slika, klikom na taster ESC.
+Prvo je potrebno prikupiti slike koje predstavljaju ulazne podatke. To se obavlja pomoću fajla '1_collect_imgs.py'. U okviru ovog fajla koristi se kamera za prikupljanje slika, pri čemu korisnik snima sliku pritiskom na taster ENTER. Svaka snimljena slika se čuva u direktorijumu data. Ove slike služe za kreiranje skupa podataka za treniranje modela. Za svako snimljeno slovo kreira se po 100 slika. Na primer, u direktorijumu data nalazi se folder A, koji sadrži 100 slika slova A snimljenih iz različitih uglova. Takođe, korisnik može prekinuti snimanje slika pritiskom na taster ESC.
 
-Program učitava slike ruku iz različitih foldera, pri čemu svaki folder predstavlja jednu klasu (na primer, različite gestove ruke). Zatim koristi MediaPipe (modul mp_hands) za detekciju ruke na svakoj slici. Nakon uspešne detekcije, iz slike se izdvajaju koordinate landmarkova, odnosno zglobova prstiju ruke. Na osnovu tih koordinata kreira se vektor karakteristika (feature vektor), koji predstavlja numeričku reprezentaciju položaja prstiju. Na kraju, svi dobijeni podaci, zajedno sa odgovarajućim klasama (labelama), čuvaju se u .pickle fajl, kako bi mogli da se koriste u narednim fazama, poput treniranja modela mašinskog učenja
+Program učitava slike ruku iz različitih foldera, pri čemu svaki folder predstavlja jednu klasu (na primer, različite gestove ruke). Zatim koristi MediaPipe modul mp_hands za detekciju ruke na svakoj slici. Nakon uspešne detekcije, iz slike se izdvajaju koordinate landmarkova. Na osnovu tih koordinata kreira se vektor (feature vektor), koji predstavlja numeričku reprezentaciju položaja prstiju. Na kraju, svi prikupljeni podaci, zajedno sa odgovarajućim klasama (labelama), čuvaju se u .pickle fajl, kako bi se mogli koristiti u narednim fazama, kao što je treniranje modela mašinskog učenja. Ovo je prikazano sledećim kodom:
 
 ###### Inicijalizacija MediaPipe Hand modula
 <pre>```mp_hands = mp.solutions.hands

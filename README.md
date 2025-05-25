@@ -71,6 +71,10 @@ Model za detekciju dlana locira ruke unutar ulazne slike, dok model za detekciju
 * Nedostatak detaljne dokumentacije za napredne primene
 
 ### MediaPipe vs Open CV vs TensorFlow
+MediaPipe, OpenCV i TensorFlow su tri različite tehnologije koje se često koriste zajedno.
+MediaPipe je framework za kreiranje pipeline-ova za računarski vid i obradu senzorskih podataka, fokusiran na real-time performanse i modularnost.
+OpenCV je biblioteka sa alatima za obradu slika i videa, koja može da se koristi kao pomoćni alat za MediaPipe, naročito za manipulaciju slika, prikaz, čuvanje videa i slične operacije.
+TensorFlow je platforma za mašinsko učenje, koja se može integrisati u MediaPipe pipeline da bi se koristili ML modeli za prepoznavanje, klasifikaciju i druge zadatke.
 ![Alt text](Comparison-of-MediaPipe-and-other-frameworks.PNG)
 
 ## Realizacija projekta i struktura

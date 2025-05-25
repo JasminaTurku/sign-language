@@ -123,12 +123,12 @@ hands = mp_hands.Hands(static_image_mode=True, min_detection_confidence=0.5)```<
                 features = create_features(hand_landmarks, x_, y_)
                 data.append(features)
                 labels.append(dir_)```</pre>
-
 ###### Čuvanje podataka u pickle fajl
 <pre>```f = open('data.pickle', 'wb')<br>
 pickle.dump({'data': data, 'labels': labels}, f)<br>
 f.close()```</pre>
-###### Ekstrakcija X i Y koordinata landmarka ruke
+                
+### Funkcija extract_hand_landmark_cordinates
 <pre>```def extract_hand_landmark_coordinates(hand_landmarks):
     x_ = []
     y_ = []
@@ -137,8 +137,8 @@ f.close()```</pre>
         y = hand_landmarks.landmark[i].y
         x_.append(x)
         y_.append(y)
-    return x_, y_```</pre>
-
+    return x_, y_ ```</pre>
+    
 ###### Kreiranje feature vektora relativno u odnosu na minimalnu vrednost
 <pre>```def create_features(hand_landmarks, x_, y_):
     features = []
@@ -220,6 +220,18 @@ hands = mp_hands.Hands(static_image_mode=True, min_detection_confidence=0.3)```<
             draw_predicted_character(frame, x_, y_, W, H, predicted_character)
             # Izgovaranje znaka glasom
             text_to_speech_threaded(predicted_character) ```</pre>
+#### Funkcija draw_hand_lendmarks
+<pre>``` import mediapipe as mp
+def draw_hand_landmarks(frame, hand_landmarks):
+    mp_drawing = mp.solutions.drawing_utils
+    mp_drawing_styles = mp.solutions.drawing_styles
+    mp_hands = mp.solutions.hands
+    mp_drawing.draw_landmarks(
+        frame,
+        hand_landmarks,
+        mp_hands.HAND_CONNECTIONS,
+        mp_drawing_styles.get_default_hand_landmarks_style(),
+        mp_drawing_styles.get_default_hand_connections_style())```</pre>
 
 #### Izlaz koji dobijemo
 ![Alt text](Output1.PNG)

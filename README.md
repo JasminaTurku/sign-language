@@ -243,7 +243,9 @@ Google AI Project – Sign Language Detection - Google razvija sistem koji pomo�
 SignAll - Projekat koji koristi AI, kompjuterski vid i senzore za automatsko prepoznavanje američkog znakovnog jezika (ASL). Sistemi prepoznaju ruku u realnom vremenu i prevode ASL u tekst bez potrebe za ljudskim prevodiocem.<br>
 Doktorski projekat Mladena Radakovića - razvijen model zasnovan na veštačkoj inteligenciji za prepoznavanje dvoručne azbuke srpskog znakovnog jezika.Sistem koristi kamere mobilnih uređaja ili računara i veštačku inteligenciju za prepoznavanje pokreta ruku i njihovo prevođenje u tekst.<br>
 
-
+## Instalacija
+* download: opencv-python==4.7.0.68
+* download: mediapipe==0.9.0.1
 
 
 

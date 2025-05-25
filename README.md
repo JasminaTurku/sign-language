@@ -54,7 +54,7 @@ Hand Landmarker koristi paket modela koji sadrži dva ugrađena modela: model za
 Paket modela za detekciju ključnih tačaka šake prepoznaje lokacije 21 ključne tačke unutar detektovanih oblasti šake.
 ![Alt text](hand-tracking.PNG)
 
-Model za detekciju dlana locira ruke unutar ulazne slike, dok model za detekciju ključnih tačaka prepoznaje specifične tačke na šaci u isečku slike koji je definisan od strane modela za detekciju dlana. Pošto je pokretanje modela za detekciju dlana vremenski zahtevno, u režimu rada sa video zapisom ili prenosom uživo, Hand Landmarker koristi bounding box koji je model za ključne tačke šake detektovao u jednom frejmu, kako bi lokalizovao oblast ruke u narednim frejmovima. Hand Landmarker ponovo pokreće model za detekciju dlana samo ako model za ključne tačke više ne prepoznaje prisustvo šake ili ne uspeva da prati šaku u okviru. Ovo smanjuje broj pokretanja modela za detekciju dlana.
+Model za detekciju dlana locira ruke unutar ulazne slike, dok model za detekciju ključnih tačaka prepoznaje specifične tačke na šaci u delu slike koji je definisan od strane modela za detekciju dlana. Pošto je pokretanje modela za detekciju dlana vremenski zahtevno, u režimu rada sa video zapisom, Hand Landmarker koristi bounding box koji je model za ključne tačke šake detektovao u jednom frejmu, kako bi lokalizovao oblast ruke u narednim frejmovima. Hand Landmarker ponovo pokreće model za detekciju dlana samo ako model za ključne tačke više ne prepoznaje prisustvo šake ili ne uspeva da prati šaku u okviru. Ovo smanjuje broj pokretanja modela za detekciju dlana.
 
 ### Prednosti MediaPipe
 #### MediaPipe nudi gotove i dobro optimizovane modele pa samim tim nema potrebe za treniranjem sopstvenih modela:

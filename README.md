@@ -98,7 +98,7 @@ data.pickle<br>
 model.p<br>
 
 #### Realizacija projekta
-Prvi zadatak aplikacije je da se kao ulazni podatak prikaže znak uz pomoć kamere a da je izlazni podatak slovo koje se prikazuje na ekranu.
+Zadatak aplikacije je da se kao ulazni podatak dobije znak uz pomoć kamere a daje izlazni podatak slovo koje se prikazuje na ekranu i izgovara to slovo ili cele rečenice.
 ![Alt text](The-first-goal.PNG)
 
 Prvo je potrebno prikupiti slike koje predstavljaju ulazne podatke. To se obavlja pomoću fajla 1_collect_imgs.py. U okviru ovog fajla koristi se kamera za prikupljanje slika, pri čemu korisnik označava trenutak snimanja pritiskom na taster ENTER. Svaka snimljena slika se čuva u direktorijumu data, u posebnoj fascikli koja odgovara prikazanom simbolu. Ove slike se koriste za kreiranje skupa podataka za treniranje modela. Za svako snimljeno slovo kreira se po 100 slika. Na primer, u direktorijumu data nalaziće se folder A koja sadrži 100 slika slova A iz različitih uglova. Takodje, korisnik ima mogucnost da prekine snimanje slika, klikom na taster ESC.

@@ -17,9 +17,13 @@ Ova aplikacija ima za cilj da pomogne u prevazilaženju tog problema. Korišćen
 ![Alt text](MediaPipe.PNG)
 
 #### Nastanak Mediapip-a
-MediaPipe potiče iz perioda između 2010. i 2014. godine, kada je Google započeo istraživanja u oblasti mašinskog učenja i računarskog vida.
-Godine 2018, MediaPipe je značajno unapređen kroz uvedenu modularnu arhitekturu i dodatak unapred pripremljenih komponenti, što je omogućilo jednostavniju primenu kompleksnih modela na uređajima poput telefona. U periodu 2019–2020, dodatno je unapređena funkcionalnost biblioteke kroz proširene mogućnosti kao što su prepoznavanje lica, detekcija objekata, proširena stvarnost i obrada zvuka. Od 2020. do 2022. godine, MediaPipe je postao sveobuhvatna biblioteka za multimedijalne aplikacije, sa akcentom na fleksibilnost i efikasnost.
-Do 2024. godine, biblioteka je postala kompletno rešenje za izgradnju naprednih multimedijalnih aplikacija.
+MediaPipe je razvio Google, a njegovi počeci potiču iz perioda između 2010. i 2014. godine, kada su započeta istraživanja u oblasti mašinskog učenja i računarskog vida.
+Godine 2018, MediaPipe je prvi put predstavljen kao biblioteka za obradu videa u realnom vremenu na lokalnim uređajima.
+U periodu 2019–2020, biblioteka je značajno unapređena — uvedena je modularna arhitektura i dodate su unapred pripremljene komponente, što je omogućilo lakšu implementaciju složenih modela čak i na mobilnim telefonima <br>
+Tokom 2020–2022, MediaPipe je dodatno proširen sa novim funkcionalnostima, uključujući prepoznavanje lica, detekciju objekata, obradu zvuka i podršku za proširenu stvarnost.
+Od 2024. godine, MediaPipe postaje sveobuhvatna biblioteka za razvoj multimedijalnih aplikacija, sa naglaskom na fleksibilnost, efikasnost i jednostavnu primenu u realnom vremenu.
+
+
 
 #### Osnovne funkcionalnosti i tehnologije
 MediaPipe dolazi sa mnogim uzbudljivim funkcijama. Jedna od ključnih karakteristika je mogućnost korišćenja snage GPU-ova za bržu obradu podataka. Zahvaljujući ovoj tehnologiji, MediaPipe može obrađivati čak i najzahtevnije multimedijalne zadatke u realnom vremenu. Takođe, zahvaljujući paralelnom procesiranju, MediaPipe može istovremeno obavljati više zadataka, kao što je procesiranje više video tokova ili pokretanje više modela računarskog vida istovremeno.

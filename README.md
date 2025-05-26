@@ -44,7 +44,7 @@ MediaPipe je dizajniran da radi na više platformi. Podržava operativne sisteme
 MediaPipe dolazi sa velikim brojem unapred definisanih rešenja koja omogućavaju brzo postavljanje sistema bez potrebe za dodatnim treniranjem modela. Neka od najpoznatijih rešenja uključuju:
 Face Detection – detekcija lica u realnom vremenu<br>
 Face Mesh – mapiranje preko 400 tačaka na licu<br>
-Hand Tracking – precizno praćenje pokreta ruku i prstiju - koji je korišćen u samoj aplikaciji<br>
+Hand Tracking – precizno praćenje pokreta ruku i prstiju <br>
 Pose Estimation – analiza položaja tela<br>
 Objectron – 3D detekcija objekata<br>
 Holistic – kombinovano praćenje tela, ruku i lica<br>

@@ -231,7 +231,7 @@ def draw_hand_landmarks(frame, hand_landmarks):
         mp_drawing_styles.get_default_hand_landmarks_style(),
         mp_drawing_styles.get_default_hand_connections_style())```</pre>
 
-#### Izlaz koji dobijemo
+#### Izlaz koji dobijamo
 ![Alt text](assets/Output1.PNG)
 ![Alt text](assets/Output2.PNG)
 

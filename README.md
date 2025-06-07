@@ -239,8 +239,9 @@ def draw_hand_landmarks(frame, hand_landmarks):
 
 
 ## Instalacija
-* download: opencv-python==4.7.0.68
-* download: mediapipe==0.9.0.1
+Projekat je radjen po uzoru na video: https://www.youtube.com/watch?v=MJCSjXepaAM&t=2797s
+Za pokretanje je potrebno izvrsiti sledece komande:
+pip install -r requirements.txt - sve zavisnosti ce se nalaziti kod vas lokalno nakon ove komande
 
 
 
@@ -263,10 +264,4 @@ ctrl+shift+p -> python select interpreter
 
 ```
 pip freeze > requirements.txt
-```
-
-### Install libraries from the requirements.txt file
-
-```
-pip install -r requirements.txt
 ```

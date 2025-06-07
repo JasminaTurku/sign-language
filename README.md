@@ -18,7 +18,7 @@ Ova aplikacija ima za cilj da pomogne u prevazilaženju tog problema. Korišćen
 MediaPipe je razvio Google, a njegovi počeci potiču iz perioda između 2010. i 2014. godine, kada su započeta istraživanja u oblasti mašinskog učenja i računarskog vida.
 Godine 2018. MediaPipe je prvi put predstavljena kao biblioteka za obradu videa u realnom vremenu na uređajima.
 U periodu 2019–2020. biblioteka je značajno unapređena — uvedena je modularna arhitektura i dodate su unapred pripremljene komponente, što je omogućilo lakšu implementaciju složenih modela.<br>
-Tokom 2020–2022. MediaPipe je dodatno proširen sa novim funkcionalnostima, uključujući prepoznavanje lica, detekciju objekata, obradu zvuka i td.
+Tokom 2020–2022. MediaPipe je dodatno proširena sa novim funkcionalnostima, uključujući prepoznavanje lica, detekciju objekata, obradu zvuka i td.
 Od 2024. godine, MediaPipe postaje sveobuhvatna biblioteka za razvoj multimedijalnih aplikacija, sa naglaskom na fleksibilnost, efikasnost i jednostavnu primenu u realnom vremenu.
 
 #### Osnovne funkcionalnosti i tehnologije

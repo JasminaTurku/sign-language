@@ -3,7 +3,7 @@ Aplikacija za prevođenje znakovnog jezika u tekst ili govor u realnom vremenu. 
 
 ## Sadržaj
 - [Problem koji aplikacija rešava?](#problem-koji-aplikacija-rešava)
-- [Media pipe biblioteka](#media-pipe-biblioteka)
+- [Mediapipe biblioteka](#media-pipe-biblioteka)
 - [Realizacija projekta i struktura](#realizacija-projekta-i-struktura)
 - [Instalacija](#instalacija)
 

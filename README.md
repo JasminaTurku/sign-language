@@ -9,7 +9,7 @@ Aplikacija za prevođenje znakovnog jezika u tekst ili govor u realnom vremenu. 
 
 ## Problem koji aplikacija rešava?
 Glavni problem sa kojim se suočavaju gluvoneme osobe je način na koji komuniciraju sa ljudima koji ne poznaju znakovni jezik. U Srbiji je ovaj problem posebno izražen, jer prema podacima Saveza gluvih i nagluvih Srbije, oko 70.000 osoba koristi srpski znakovni jezik kao svoj prvi jezik. Nažalost, u Srbiji postoji oko 30 tumača znakovnog jezika za 70.000 ljudi. Nedostatak tumača ozbiljno otežava svakodnevni život osoba koje koriste znakovni jezik. Takođe, usluga tumača je uglavnom dostupna samo u kritičnim situacijama, dok su svakodnevne potrebe ove zajednice često zapostavljene.
-Ova aplikacija ima za cilj da pomogne u prevazilaženju tog problema. Korišćenjem kamere, korisnik može pokazati znak rukom, a aplikacija će prepoznati i prikazati odgovarajuće slovo. Osim prikaza, aplikacija može i izgovoriti to slovo pa čak i celu rečenicu, pa korisnik može istovremeno slušati i gledati slova
+Ova aplikacija ima za cilj da pomogne u prevazilaženju tog problema. Korišćenjem kamere, korisnik može pokazati znak rukom, a aplikacija će prepoznati i prikazati odgovarajuće slovo. Osim prikaza, aplikacija može i izgovoriti slovo pa čak i celu rečenicu, pa korisnik može istovremeno slušati i gledati slova
 
 ## Mediapipe biblioteka
 ![Alt text](assets/MediaPipe.PNG)

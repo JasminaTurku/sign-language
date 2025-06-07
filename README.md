@@ -127,7 +127,6 @@ pickle.dump({'data': data, 'labels': labels}, f)<br>
 f.close()```</pre>
                 
 ### Funkcija extract_hand_landmark_cordinates 
-//Izvlači x i y koordinate za sve tačke ruke
 <pre>```def extract_hand_landmark_coordinates(hand_landmarks):
     x_ = []
     y_ = []

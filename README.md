@@ -75,7 +75,7 @@ MediaPipe je framework za kreiranje pipeline-ova za računarski vid i obradu sen
 OpenCV je biblioteka sa alatima za obradu slika i videa, koja može da se koristi kao pomoćni alat za MediaPipe, naročito za manipulaciju slika, prikaz, čuvanje videa i td.<br>
 TensorFlow je platforma za mašinsko učenje, koja se može integrisati u MediaPipe pipeline da bi se koristili ML modeli za prepoznavanje, klasifikaciju i druge zadatke.<br>
 
-![Alt text](Comparison-of-MediaPipe-and-other-frameworks.PNG)
+![Alt text](assets/Comparison-of-MediaPipe-and-other-frameworks.PNG)
 
 ## Realizacija projekta i struktura
 #### Struktura projekta
@@ -98,7 +98,7 @@ model.p<br>
 
 #### Realizacija projekta
 Zadatak aplikacije je da kao ulaz primi znak preko kamere, a kao izlaz prikaže odgovarajuće slovo na ekranu i izgovori to slovo ili celu rečenicu.
-![Alt text](The-first-goal.PNG)
+![Alt text](assets/The-first-goal.PNG)
 
 Prvo je potrebno prikupiti slike koje predstavljaju ulazne podatke. To se obavlja pomoću fajla '1_collect_imgs.py'. U okviru ovog fajla koristi se kamera za prikupljanje slika, pri čemu korisnik snima sliku pritiskom na taster ENTER. Svaka snimljena slika se čuva u direktorijumu data. Ove slike služe za kreiranje skupa podataka za treniranje modela. Za svako snimljeno slovo kreira se po 100 slika. Na primer, u direktorijumu data nalazi se folder A, koji sadrži 100 slika slova A snimljenih iz različitih uglova. Takođe, korisnik može prekinuti snimanje slika pritiskom na taster ESC.
 

@@ -82,7 +82,6 @@ TensorFlow je platforma za mašinsko učenje, koja se može integrisati u MediaP
 data/<br>
 utils/<br>
 │<br>
-├── __pycache__/<br>
 ├── create_features.py<br>
 ├── draw_hand_landmarks.py<br>
 ├── draw_predicted_character.py<br>

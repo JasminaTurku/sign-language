@@ -61,7 +61,7 @@ Paket modela za detekciju ključnih tačaka šake prepoznaje lokacije 21 ključn
 * Visoke performanse u realnom vremenu: optimizovan za rad u realnom vremenu, čak i na mobilnim uređajima
 * Višeplatformska podrška: radi na Windows, Linux, macOS, Android i iOS. Može se koristiti sa Python-om, C++, JavaScript-om, pa čak i u Unity okruženju
 * Modularna arhitektura: koristi "pipeline" pristup: svaki deo obrade (npr. prepoznavanje, filtriranje, vizualizacija) je modularan i može se prilagoditi.
-* Open-source: razvijena od strane Google-a i objavljen pod Apache 2.0 licencom.
+* Open-source: razvijena od strane Google-a 
 
 ### Mane MediaPipe 
 * Ograničena prilagodljivost modela: MediaPipe koristi unapred trenirane modele. Ne može se lako trenirati sopstveni modeli unutar MediaPipe okruženja.

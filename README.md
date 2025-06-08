@@ -58,7 +58,7 @@ Paket modela za detekciju ključnih tačaka šake prepoznaje lokacije 21 ključn
 
 ### Prednosti MediaPipe
 * MediaPipe nudi gotove i dobro optimizovane modele pa samim tim nema potrebe za treniranjem sopstvenih modela: detekciju ruku, praćenje lica, detekciju tela, detekciju objekata...
-* Visoke performanse u realnom vremenu: optimizovan za rad u realnom vremenu, čak i na mobilnim uređajima
+* Visoke performanse u realnom vremenu: optimizovana za rad u realnom vremenu, čak i na mobilnim uređajima
 * Višeplatformska podrška: radi na Windows, Linux, macOS, Android i iOS. Može se koristiti sa Python-om, C++, JavaScript-om, pa čak i u Unity okruženju
 * Modularna arhitektura: koristi "pipeline" pristup: svaki deo obrade (npr. prepoznavanje, filtriranje, vizualizacija) je modularan i može se prilagoditi.
 * Open-source: razvijena od strane Google-a 

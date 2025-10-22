@@ -9,17 +9,17 @@ from utils.draw_predicted_character import draw_predicted_character
 from utils.extract_hand_landmark_coordinates import extract_hand_landmark_coordinates
 from utils.create_features import create_features
 
-# Load the trained model
+
 model_dict = pickle.load(open('./model.p', 'rb'))
 model = model_dict['model']
 
-# Define the data directory
+
 DATA_DIR = './data'
 
-# Get sorted list of directory names
-labels = sorted(os.listdir(DATA_DIR))  # Ensure the labels are sorted
 
-# Create label mapping and reverse mapping
+labels = sorted(os.listdir(DATA_DIR))  
+
+
 label_mapping = {label: idx for idx, label in enumerate(labels)}
 reverse_label_mapping = {idx: label for label, idx in label_mapping.items()}
 

@@ -2,15 +2,13 @@ import os
 import cv2
 import time
 
-# Podešavanje foldera za čuvanje podataka
+
 DATA_DIR = './data'
 if not os.path.exists(DATA_DIR):
     os.makedirs(DATA_DIR)
 
-# Broj slika po slovu
-dataset_size = 100  # Broj slika po slovu
+dataset_size = 100 
 
-# Aktiviraj kameru
 cap = cv2.VideoCapture(0)
 
 ESC = 27
@@ -18,11 +16,11 @@ ENTER = 13
 
 try:
     while True:
-        # Prikaz poruke za unos slova preko kamere
+  
         selected_letter = None
         while True:
             ret, frame = cap.read()
-            if not ret:  # Ako kamera ne učita frejm
+            if not ret: 
                 print("Greška pri učitavanju frejma kamere. Pokušavam ponovo...")
                 continue
 

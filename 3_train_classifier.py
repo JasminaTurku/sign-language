@@ -5,23 +5,21 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 import os
 
-# Load data from the pickle file
 data_dict = pickle.load(open('./data.pickle', 'rb'))
 
-# Define the data directory
 DATA_DIR = './data'
 
-# Get sorted list of directory names
-labels = sorted(os.listdir(DATA_DIR))  # Ensure the labels are sorted
 
-# Create label mapping and reverse mapping
+labels = sorted(os.listdir(DATA_DIR))  
+
+
 label_mapping = {label: idx for idx, label in enumerate(labels)}
 reverse_label_mapping = {idx: label for label, idx in label_mapping.items()}
 
 filtered_data = []
 filtered_labels = []
 for data, label in zip(data_dict['data'], data_dict['labels']):
-    if label in label_mapping:  # Ovo osigurava da su svi podaci pravilno mapirani
+    if label in label_mapping:  
         filtered_data.append(data)
         filtered_labels.append(label_mapping[label])
 
